@@ -1,11 +1,7 @@
-import Home from "./pages/Home";
-import Login from "./pages/Login";
+import AppRouter from "@/application/router/AppRouter";
+
 function App() {
-  return (
-    <>
-      <Login></Login>
-    </>
-  );
+  return <AppRouter />;
 }
 
 export default App;
