@@ -4,7 +4,7 @@ import {
   Center,
   Input,
   VStack,
-  Icon,
+  Image,
   Button,
   Divider,
   HStack,
@@ -13,6 +13,8 @@ import { FaChurch } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import fondo from "@/assets/fondo.png";
+import icono2 from "@/assets/icono2.png";
 
 function Login() {
   const navigate = useNavigate();
@@ -24,39 +26,61 @@ function Login() {
   };
 
   return (
-    <Center minH="100vh" p={5}>
+    <Center
+      bgImage={fondo}
+      backgroundRepeat="no-repeat"
+      minH="100vh"
+      minW="100%"
+      p={0}
+    >
       <Box w="100%">
         <Center flexDirection="column">
-          <Icon as={FaChurch} w="150px" h="150px" color="#5AC7E5" mb={4} />
+          <Image
+            src={icono2}
+            mb={6}
+            filter="
+    brightness(0.95)
+    saturate(0.5)
+    hue-rotate(-10deg)
+    drop-shadow(0 6px 18px rgba(0,0,0,0.45))
+  "
+          />
 
           <Text
-            fontSize="24px"
-            fontWeight="semibold"
-            color="#152563"
+            fontFamily="Montserrat, sans-serif;"
+            fontSize="34px"
+            fontWeight="bold"
+            color="white"
             mb={8}
             textAlign="center"
           >
-            ¡Qué bueno verte de nuevo!
+            ¡Bienvenido!
           </Text>
 
           <VStack spacing={4} w="100%" maxW="320px">
             <Input
               placeholder="Correo / Número telefónico"
+              _placeholder={{ color: "#4c4c4c" }}
+              fontFamily="Montserrat, sans-serif;"
+              fontWeight="bold"
               h="50px"
-              bg="gray.100"
+              bg="white"
               border="none"
               borderRadius="999px"
               textAlign="center"
+              color="#4c4c4c"
             />
 
             <Button
               h="52px"
               w="100%"
-              bg="#5AC7E5"
+              bg="#fe6d40"
               color="white"
               borderRadius="999px"
+              fontFamily="Montserrat, sans-serif;"
+              fontWeight="bold"
               fontSize="16px"
-              _hover={{ bg: "#48b6d3" }}
+              _hover={{ bg: "#a64c31" }}
               onClick={handleLogin}
             >
               Inicia sesión
@@ -65,24 +89,21 @@ function Login() {
 
           <HStack my={8} w="100%" maxW="320px">
             <Divider flex="1" />
-            <Text fontSize="14px" color="gray.500" whiteSpace="nowrap">
+            <Text fontSize="14px" color="white" whiteSpace="nowrap">
               O continúa con
             </Text>
             <Divider flex="1" />
           </HStack>
 
           <HStack spacing={6}>
-            <Button bg="black" borderRadius="12px" w="60px" h="50px">
+            <Button bg="white" borderRadius="12px" w="60px" h="50px">
               <FcGoogle size={24} />
-            </Button>
-            <Button bg="black" borderRadius="12px" w="60px" h="50px">
-              <FaFacebookF color="white" size={20} />
             </Button>
           </HStack>
 
-          <Text mt={8} fontSize="sm" color="#152563">
+          <Text mt={8} fontSize="sm" fontWeight="bold" color="white">
             ¿Aún no estás registrado?{" "}
-            <Text as="span" fontWeight="semibold" cursor="pointer">
+            <Text as="span" fontWeight="bold" color="#fe6d40" cursor="pointer">
               Regístrate
             </Text>
           </Text>

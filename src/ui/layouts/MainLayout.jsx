@@ -30,8 +30,8 @@ export default function MainLayout() {
       {/* Contenido principal */}
       <Container
         maxW={{ base: "container.sm", md: "container.lg" }}
-        px={{ base: 4, md: 8 }}
-        pt={{ base: 4, md: 6 }}
+        px={{ base: 0, md: 0 }}
+        pt={{ base: 0, md: 0 }}
         pb={{ base: showNavigation ? "90px" : 0, md: 6 }}
         display="flex"
         flexDirection="column"
