@@ -62,7 +62,7 @@ function Login() {
             <Input
               placeholder="Correo / Número telefónico"
               _placeholder={{ color: "#4c4c4c" }}
-              fontFamily="Montserrat, sans-serif"
+              fontFamily="Montserrat, sans-serif;"
               fontWeight="bold"
               h="50px"
               bg="white"

@@ -1,6 +1,7 @@
-import { Center, Text, Button, VStack, Box } from "@chakra-ui/react";
+import { Center, Text, Button, VStack, Box, Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import fondo from "@/assets/fondo.png";
+import icono2 from "@/assets/icono2.png";
 import { BiSolidPiano } from "react-icons/bi";
 import { IoMdMicrophone } from "react-icons/io";
 
@@ -13,7 +14,36 @@ function Rol() {
   };
 
   return (
-    <Center minH="100vh" bg="gray.50" p={5} bgImage={fondo}>
+    <Center
+      position="relative"
+      minH="100vh"
+      bgImage={fondo}
+      bgSize="cover"
+      bgPosition="center"
+      overflow="hidden"
+      p={0}
+      m={0}
+    >
+      {/* ICONO DE FONDO */}
+      <Image
+        m="auto"
+        src={icono2}
+        position="absolute"
+        top="20%"
+        left="50%"
+        transform="translateX(-50%)"
+        w="2xs"
+        opacity={0.25}
+        filter="
+      brightness(0.95)
+      saturate(0.5)
+      hue-rotate(-10deg)
+    "
+        zIndex={0}
+        pointerEvents="none"
+      />
+
+      {/* CARD DEL ROL */}
       <Box
         bg="white"
         p={10}
@@ -22,23 +52,14 @@ function Rol() {
         w="100%"
         maxW="360px"
         textAlign="center"
+        zIndex={1}
       >
         <VStack spacing={6}>
-          <Text
-            fontFamily="Montserrat, sans-serif"
-            fontSize="34px"
-            fontWeight="extrabold"
-            color="#4c4c4c"
-          >
+          <Text fontSize="34px" fontWeight="extrabold" color="#4c4c4c">
             ¿Cuál es tu rol?
           </Text>
 
-          <Text
-            fontFamily="Montserrat, sans-serif"
-            fontSize="sm"
-            fontWeight="semibold"
-            color="#636363"
-          >
+          <Text fontSize="sm" fontWeight="semibold" color="#636363">
             Esto nos ayudará a personalizar tu experiencia
           </Text>
 
