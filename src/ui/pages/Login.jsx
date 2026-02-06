@@ -36,8 +36,9 @@ function Login() {
       <Box w="100%">
         <Center flexDirection="column">
           <Image
+            mx="auto"
+            w="2xs"
             src={icono2}
-            mb={6}
             filter="
     brightness(0.95)
     saturate(0.5)
@@ -61,7 +62,7 @@ function Login() {
             <Input
               placeholder="Correo / Número telefónico"
               _placeholder={{ color: "#4c4c4c" }}
-              fontFamily="Montserrat, sans-serif;"
+              fontFamily="Montserrat, sans-serif"
               fontWeight="bold"
               h="50px"
               bg="white"
