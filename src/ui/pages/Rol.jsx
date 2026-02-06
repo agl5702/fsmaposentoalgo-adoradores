@@ -55,7 +55,12 @@ function Rol() {
         zIndex={1}
       >
         <VStack spacing={6}>
-          <Text fontSize="34px" fontWeight="extrabold" color="#4c4c4c">
+          <Text
+            fontFamily="Montserrat, sans-serif"
+            fontWeight="extrabold"
+            fontSize="34px"
+            color="#4c4c4c"
+          >
             ¿Cuál es tu rol?
           </Text>
 

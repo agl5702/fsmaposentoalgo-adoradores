@@ -3,6 +3,7 @@ import { Box, Container } from "@chakra-ui/react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import HeaderMenu from "@/ui/components/HeaderMenu";
 import BottomNav from "@/ui/components/navigations/BottomNav";
+import fondo from "@/assets/fondo.png";
 
 export default function MainLayout() {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function MainLayout() {
     location.pathname.startsWith("/profile");
 
   return (
-    <Box minH="100vh" bg="gray.50">
+    <Box minH="100vh" bg="gray.50" bgImage={fondo} bgSize="cover">
       {/* Header PC */}
       {showNavigation && <HeaderMenu onLogout={handleLogout} />}
 

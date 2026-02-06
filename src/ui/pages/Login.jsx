@@ -48,7 +48,7 @@ function Login() {
           />
 
           <Text
-            fontFamily="Montserrat, sans-serif;"
+            fontFamily="Montserrat, sans-serif"
             fontSize="34px"
             fontWeight="bold"
             color="white"

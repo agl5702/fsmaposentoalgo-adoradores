@@ -54,11 +54,18 @@ export default function Home() {
   if (!role) return null;
 
   return (
-    <Box>
+    <Box p="15px">
       {/* HEADER */}
       <Box mb={8}>
-        <Heading size="lg">Buenos días</Heading>
-        <Text color="gray.500">
+        <Heading
+          fontFamily="Montserrat, sans-serif"
+          fontWeight="extrabold"
+          size="lg"
+          color="white"
+        >
+          !Hola¡
+        </Heading>
+        <Text color="white">
           Bienvenido, contenido para <b>{role}</b>
         </Text>
       </Box>
@@ -67,14 +74,18 @@ export default function Home() {
       <Box mb={10} p={5} bg={sectionBg} borderRadius="lg">
         <Flex justify="space-between" align="center" mb={4}>
           <Flex align="center" gap={2}>
-            <FaBullhorn />
-            <Heading size="md">Últimos anuncios</Heading>
+            <FaBullhorn color="#4c4c4c" />
+            <Heading size="md" color="#4c4c4c">
+              Últimos anuncios
+            </Heading>
           </Flex>
 
           <Button
             size="sm"
             variant="outline"
             onClick={() => navigate("/announcements")}
+            color="#4c4c4c"
+            fontWeight="extrabold"
           >
             Ver todos
           </Button>
@@ -89,15 +100,20 @@ export default function Home() {
               transition="all .2s"
             >
               <CardBody>
-                <Heading size="sm" mb={1}>
+                <Heading
+                  color="#4c4c4c"
+                  fontWeight="extrabold"
+                  size="sm"
+                  mb={1}
+                >
                   {a.title}
                 </Heading>
                 {a.date && (
-                  <Text fontSize="xs" color="gray.500" mb={2}>
+                  <Text color="#4c4c4c" fontSize="xs" mb={2}>
                     {a.date}
                   </Text>
                 )}
-                <Text fontSize="sm" color="gray.600">
+                <Text fontSize="sm" fontWeight="bold" color="#636363">
                   {a.description}
                 </Text>
               </CardBody>
@@ -110,8 +126,10 @@ export default function Home() {
       <Box mb={10} p={5} bg={sectionBg} borderRadius="lg">
         <Flex justify="space-between" align="center" mb={4}>
           <Flex align="center" gap={2}>
-            <FaMusic />
-            <Heading size="md">Tus canciones favoritas</Heading>
+            <FaMusic color="#4c4c4c" />
+            <Heading color="#4c4c4c" size="md">
+              Tus canciones favoritas
+            </Heading>
           </Flex>
 
           <Button
@@ -199,7 +217,8 @@ export default function Home() {
                     <IconButton
                       size="sm"
                       aria-label="Favorito"
-                      colorScheme={isFav ? "red" : "blue"}
+                      bgColor={isFav ? "#5d2e6f" : "#a166b9"}
+                      color="white"
                       icon={isFav ? <BsBookmarkFill /> : <BsBookmarkPlusFill />}
                       onClick={() => toggleFavorite(song.id)}
                     />
