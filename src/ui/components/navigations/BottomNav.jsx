@@ -34,7 +34,7 @@ export default function BottomNav() {
               direction="column"
               align="center"
               cursor="pointer"
-              color={isActive ? "blue.600" : "gray.500"}
+              color={isActive ? "orange.400" : "gray.500"}
               onClick={() => navigate(item.path)}
             >
               <Icon size={20} />

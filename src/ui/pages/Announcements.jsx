@@ -13,7 +13,7 @@ function Announcements() {
   const role = localStorage.getItem("role");
 
   return (
-    <Box>
+    <Box p="15px">
       {/* Encabezado */}
       <Text fontSize="2xl" fontWeight="bold" mb={2}>
         Anuncios 📢

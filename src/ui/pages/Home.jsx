@@ -65,13 +65,13 @@ export default function Home() {
         >
           !Hola¡
         </Heading>
-        <Text color="white">
-          Bienvenido, contenido para <b>{role}</b>
+        <Text fontWeight="medium" color="white">
+          Disfruta aprendiendo tu contenido favorito
         </Text>
       </Box>
 
       {/* ================= ANUNCIOS ================= */}
-      <Box mb={10} p={5} bg={sectionBg} borderRadius="lg">
+      <Box mb={10} p={5} bg="white" borderRadius="lg">
         <Flex justify="space-between" align="center" mb={4}>
           <Flex align="center" gap={2}>
             <FaBullhorn color="#4c4c4c" />
@@ -95,13 +95,13 @@ export default function Home() {
           {announcements.slice(0, 2).map((a) => (
             <Card
               key={a.id}
-              bg={cardBg}
-              _hover={{ bg: cardHover, transform: "translateY(-2px)" }}
+              bg="#DCDCDE"
+              _hover={{ transform: "translateY(-2px)" }}
               transition="all .2s"
             >
               <CardBody>
                 <Heading
-                  color="#4c4c4c"
+                  color="#4B4B4B"
                   fontWeight="extrabold"
                   size="sm"
                   mb={1}
@@ -109,7 +109,7 @@ export default function Home() {
                   {a.title}
                 </Heading>
                 {a.date && (
-                  <Text color="#4c4c4c" fontSize="xs" mb={2}>
+                  <Text color="#4B4B4B" fontSize="xs" mb={2}>
                     {a.date}
                   </Text>
                 )}
@@ -123,7 +123,7 @@ export default function Home() {
       </Box>
 
       {/* ================= FAVORITOS ================= */}
-      <Box mb={10} p={5} bg={sectionBg} borderRadius="lg">
+      <Box mb={10} p={5} bg="white" borderRadius="lg">
         <Flex justify="space-between" align="center" mb={4}>
           <Flex align="center" gap={2}>
             <FaMusic color="#4c4c4c" />
@@ -136,6 +136,8 @@ export default function Home() {
             size="sm"
             variant="outline"
             onClick={() => navigate("/songs")}
+            color="#4c4c4c"
+            fontWeight="extrabold"
           >
             Ver todas
           </Button>
@@ -167,7 +169,7 @@ export default function Home() {
                     <IconButton
                       size="sm"
                       aria-label="Quitar de favoritos"
-                      colorScheme="red"
+                      colorScheme="green"
                       icon={<BsBookmarkFill />}
                       onClick={() => toggleFavorite(song.id)}
                     />

@@ -11,7 +11,7 @@ export default function RoleTabs({ role, children }) {
   const tabs = tabsByRole[role] || [];
 
   return (
-    <Tabs colorScheme="blue" variant="enclosed" mb={4}>
+    <Tabs colorScheme="orange" variant="enclosed" mb={4}>
       <TabList>
         {tabs.map((tab) => (
           <Tab key={tab}>{tab}</Tab>

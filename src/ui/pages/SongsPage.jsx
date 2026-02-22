@@ -48,12 +48,15 @@ export default function SongsPage() {
   if (!role) return null;
 
   return (
-    <Box maxW="1200px" mx="10px" ref={containerRef}>
-      <Heading fontSize="2xl" mb={6}>
-        Letras de Canciones 🎵
+    <Box p="15px" maxW="1200px" mx="10px" ref={containerRef}>
+      <Heading color="white" fontSize="2xl" mb={6}>
+        Letras de Canciones
       </Heading>
 
       <SimpleGrid
+        bg="white"
+        p="10px"
+        borderRadius="5px"
         columns={{
           base: 1,
           md: expandedSong ? 1 : 2,
@@ -72,14 +75,13 @@ export default function SongsPage() {
               borderRadius="md"
               shadow={isExpanded ? "lg" : "sm"}
               overflow="hidden"
-              variant="outline"
             >
               {/* HEADER */}
               <Flex
                 p={3}
                 align="center"
                 cursor="pointer"
-                bg={isExpanded ? "blue.50" : "gray.50"}
+                bg={isExpanded ? "#b87ccf" : "gray.200"}
                 onClick={() => setExpandedSong(isExpanded ? null : song.id)}
               >
                 {!isExpanded && (
@@ -92,8 +94,20 @@ export default function SongsPage() {
                 )}
 
                 <Box flex="1">
-                  <Heading size="md">{song.name}</Heading>
-                  <Text fontStyle="italic" color="gray.600">
+                  <Heading
+                    fontFamily="Monserrat"
+                    color={isExpanded ? "white" : "gray.600"}
+                    fontWeight="extrabold"
+                    fontSize={isExpanded ? "24px" : "20px"}
+                  >
+                    {song.name}
+                  </Heading>
+                  <Text
+                    fontFamily="Monserrat"
+                    fontWeight="semibold"
+                    color={isExpanded ? "white" : "gray.500"}
+                    fontSize="15px"
+                  >
                     {song.author}
                   </Text>
                 </Box>
@@ -126,12 +140,16 @@ export default function SongsPage() {
 
                       <Flex gap={2}>
                         <Button
+                          bg="#b87ccf"
+                          color="white"
                           size="sm"
                           onClick={() => setTransposeSteps((v) => v - 1)}
                         >
                           – Semitono
                         </Button>
                         <Button
+                          bg="orange.400"
+                          color="white"
                           size="sm"
                           onClick={() => setTransposeSteps((v) => v + 1)}
                         >
@@ -159,8 +177,10 @@ export default function SongsPage() {
                         mr={4}
                       />
                       <Box>
-                        <Heading size="sm">{song.name}</Heading>
-                        <Text fontStyle="italic" fontSize="sm">
+                        <Heading color="gray.600" size="sm">
+                          {song.name}
+                        </Heading>
+                        <Text fontSize="sm" color="gray.500">
                           {song.author}
                         </Text>
                       </Box>
@@ -185,7 +205,7 @@ export default function SongsPage() {
                                 key={i}
                                 fontSize="xs"
                                 fontWeight="bold"
-                                color="blue.600"
+                                color="orange.400"
                               >
                                 {transposeChord(chord, transposeSteps)}
                               </Text>
