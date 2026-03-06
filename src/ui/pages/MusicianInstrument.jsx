@@ -121,7 +121,7 @@ function MusicianInstrument() {
             <Button
               h="80px"
               bg="#a166b9"
-              color="#55206c"
+              color="white"
               borderRadius="xl"
               onClick={() => handleSelectInstrument("guitar")}
               flexDirection="column"
