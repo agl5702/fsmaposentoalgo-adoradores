@@ -8,7 +8,8 @@ export const routes = {
 
   // rol
   rol: "/rol",
-
+  //
+  musicianInstrument: "/musician-instrument",
   // canciones
   songs: "/songs",
 

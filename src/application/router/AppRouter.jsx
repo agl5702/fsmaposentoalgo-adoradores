@@ -5,7 +5,8 @@ import SignUp from "@/ui/pages/SignUp";
 import ProtectedRoute from "@/application/router/ProtectedRoute";
 import Rol from "@/ui/pages/Rol";
 import Announcements from "@/ui/pages/Announcements";
-import SongsPage from "../../ui/pages/SongsPage";
+import SongsPage from "@/ui/pages/SongsPage";
+import MusicianInstrument from "@/ui/pages/MusicianInstrument";
 // Ejemplo de página protegida
 import Home from "@/ui/pages/Home";
 
@@ -23,6 +24,7 @@ function AppRouter() {
         <Route element={<MainLayout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/rol" element={<Rol />} />
+          <Route path="/musician-instrument" element={<MusicianInstrument />} />
           <Route path="/announcements" element={<Announcements />} />
           <Route path="/songs" element={<SongsPage />} />
         </Route>

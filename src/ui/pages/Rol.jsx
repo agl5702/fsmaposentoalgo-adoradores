@@ -10,7 +10,16 @@ function Rol() {
 
   const handleSelectRole = (role) => {
     localStorage.setItem("role", role);
-    navigate("/home");
+
+    // --- AQUÍ ESTÁ EL CAMBIO ---
+    if (role === "musico") {
+      // Si es músico, lo llevamos a la pantalla para elegir instrumento
+      navigate("/musician-instrument");
+    } else if (role === "voz") {
+      // Si es voz (cantante), lo llevamos directamente al home
+      navigate("/home");
+    }
+    // ---------------------------
   };
 
   return (
